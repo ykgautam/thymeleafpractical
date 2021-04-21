@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>condition</title>
+</head>
+<body>
+
+	<h1>this is condition page</h1>
+	<div th:with="a=10,b=20">
+		<h1>
+			value of a is <span th:text="${a}"></span>
+		</h1>
+	</div>
+
+	<h2>
+		user is <span th:style=" ${isActive} ? 'color:green': 'color:red'"
+			th:text="${isActive} ? 'Active':'Not active'"></span>
+	</h2>
+	<div>
+		<h3 th:if="${gender}=='M'">Male</h3>
+		<h3 th:unless="${gender}=='M'">Female</h3>
+	</div>
+
+	<h3>
+		size of list is <span th:text="${#lists.size(myList)}"></span>
+	</h3>
+
+	<div th:switch="${#lists.size(myList)}">
+		<h3 th:case="0">List contains 0 element</h3>
+		<h3 th:case="1">List contains 1 element</h3>
+		<h3 th:case="*">List contains more than 1 element</h3>
+		<!-- th:case="*" is default case -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>about</title>
+</head>
+<body>
+
+	<h1 th:text="${name}">this is about page</h1>
+	<h1 th:text="${currentDate}"></h1>
+	<div th:with="a=10,b=20">
+		<h1>
+			value of a is <span th:text="${a}"></span>
+		</h1>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>service</title>
+</head>
+<body>
+	<h1>we provide these many services</h1>
+	<!-- include thymeleaf templates -->
+
+	<!-- going to bring foooter here using 3 ways: insert, replace, include -->
+
+	<!-- <footer id="hostTag" th:insert="footer::footer1"></footer> -->
+
+	<!-- <footer id="hostTag" th:replace="footer::footer1"></footer> -->
+
+	<footer id="hostTag" th:include="footer::footer1"></footer>
+
+</body>
+</html>
