@@ -1,5 +1,6 @@
 package com.practice.controller;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -42,7 +43,9 @@ public class MyController {
 
 //	handler for including fragment
 	@GetMapping("/services")
-	public String servicesHandler(Model model) {
+	public String serviceHandler(Model model) {
+		model.addAttribute("title", "today's date is ");
+		model.addAttribute("date", LocalDate.now().toString());
 		return "service";
 	}
 }
